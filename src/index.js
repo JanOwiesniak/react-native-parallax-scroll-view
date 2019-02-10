@@ -59,7 +59,7 @@ class ParallaxScrollView extends Component {
 		}
 		this.state = {
 			scrollY: new Animated.Value(0),
-			viewHeight: window.height,
+			viewHeight: this.props.viewHeight ? this.props.viewHeight : window.height,
 			viewWidth: window.width
 		}
 		this.scrollY = new Animated.Value(0)
