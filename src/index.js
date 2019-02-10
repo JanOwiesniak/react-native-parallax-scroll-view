@@ -211,12 +211,11 @@ class ParallaxScrollView extends Component {
 	}
 
 	_maybeUpdateViewDimensions(e) {
-		const { nativeEvent: { layout: { width, height } } } = e
+		const { nativeEvent: { layout: { width } } } = e
 
-		if (width !== this.state.viewWidth || height !== this.state.viewHeight) {
+		if (width !== this.state.viewWidth) {
 			this.setState({
 				viewWidth: width,
-				viewHeight: height
 			})
 		}
 	}
